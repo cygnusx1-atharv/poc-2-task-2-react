@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [14.x]
 
     steps:
       - name: Checkout repository
@@ -26,4 +26,4 @@ jobs:
         run: npm i
 
       - name: Run Gulp iconfont task
-        run: npm gulp iconfont
+        run: npx gulp iconfont
