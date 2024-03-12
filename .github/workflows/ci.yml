@@ -1,16 +1,25 @@
-image: node:latest
+name: Generate Icon CSS
 
-stages:
-  - build
+on:
+  push:
+    paths:
+      - 'src/assets/images/*.svg'
 
-before_script:
-  - npm i -g gulp-cli
-  - npm i
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-iconfont:
-  stage: build
-  script:
-    - gulp iconfont
-  only:
-    changes:
-      - src/assets/images/*.svg
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Run Gulp iconfont task
+        run: npm gulp iconfont
