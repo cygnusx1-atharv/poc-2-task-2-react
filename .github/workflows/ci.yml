@@ -1,0 +1,16 @@
+image: node:latest
+
+stages:
+  - build
+
+before_script:
+  - npm i -g gulp-cli
+  - npm i
+
+iconfont:
+  stage: build
+  script:
+    - gulp iconfont
+  only:
+    changes:
+      - src/assets/images/*.svg
