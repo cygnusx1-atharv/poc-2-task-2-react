@@ -27,3 +27,11 @@ jobs:
 
       - name: Run Gulp iconfont task
         run: npx gulp iconfont
+
+      - name: Update to Github
+        run: |
+          git config --local user.email "atharvs.official@gmail.com"
+          git config --local user.name "cygnusx1-atharv"
+          git add .
+          git commit -m "Added new icon font in CSS"
+          git push
