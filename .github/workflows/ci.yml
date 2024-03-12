@@ -28,6 +28,12 @@ jobs:
       - name: Run Gulp iconfont task
         run: npx gulp iconfont
 
+      - name: Archive updated CSS file
+        uses: actions/upload-artifact@v2
+        with:
+          name: updated-css
+          path: src/components/Icon/icon.css
+
       - name: Update to Github
         run: |
           git config --local user.email "atharvs.official@gmail.com"
