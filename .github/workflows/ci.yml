@@ -37,4 +37,4 @@ jobs:
           git push
 
       - name: Update CSS on CDN
-        run: "curl -X PURGE -H 'Authorization: token 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' 'https://purge.jsdelivr.net/gh/cygnusx1-atharv/poc-2-task-2-react@main/src/components/Icon/icon.css'"
+        run: 'curl -X PURGE -H "Authorization: token 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" "https://purge.jsdelivr.net/gh/cygnusx1-atharv/poc-2-task-2-react@main/src/components/Icon/icon.css"'
