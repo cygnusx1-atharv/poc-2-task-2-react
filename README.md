@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# POC-2 Task-2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## AIM
+Create a font family out of svgs in SB using task runner like webpack/gulp (integrate to CI/CD)
 
-## Available Scripts
+## How to run the Program?
+- Clone this repository via the command `git clone https://github.com/cygnusx1-atharv/poc-2-task-2-react.git`
+- Go to the directory using `cd poc-2-task-2-react`
+- Open the terminal window (Powershell or Command Terminal) and write `npm i` to install all dependencies
+- Then write, `npm run iconfont` to generate the fonts from the svgs
+- The generated fonts will be present in the **src\assets\fonts\icons** folder in the format **.ttf, .eot, .woff, .woff2**
 
-In the project directory, you can run:
+## Nitty Gritties of the Application
 
-### `npm start`
+### Generation of SVGs
+- Using a npm package known as "Gulp" to do this
+- Gulp is a open-source JavaScript toolkit used to perform lots of automation and composition
+- One of the features of which is to create webfonts (or iconfonts)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Integration to Storybook
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Intergration to CI/CD
+- Using Github Actions to demonstrate the process of integration to CI/CD
+- Every time any image is updated in the folder, the gulp command will be run again in the pipeline
+- The resultant .css file will then be updated in the repository
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Other Replacements
+Found some other replacements, like Icomoon, Fontello etc, but decided to go ahead with gulp because of a few reasons,
+- Custom key mapping to the font icons
+- Optimization using minification of svgs before composition
+- Support for multiple font file outputs like, .css, .ttf, .eot, .woff, .woff2
+- Direct integration in the project, unlike Icomoon, where we have to do an API call everytime
