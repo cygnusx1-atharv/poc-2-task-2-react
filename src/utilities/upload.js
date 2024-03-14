@@ -11,9 +11,9 @@ const sendFileToServer = async () => {
         const response = await axios.post('http://localhost:5000/upload', formData);
         console.log('File uploaded successfully:', response.data);
     } catch (error) {
-        console.error('Error uploading file:', error.response ? error.response.data : error.message);
+        console.error('Error uploading file (Client): ', error.response ? error.response.data : error.message);
     }
-};
+}
 
 // Call the function to send the file to the server
 sendFileToServer();
