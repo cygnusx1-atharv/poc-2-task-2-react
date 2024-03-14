@@ -1,18 +1,8 @@
 import Icon from './components/Icon/Icon'
-import './App.css'
 import { useState } from 'react'
+import { images } from "./data/imagesData"
+import './App.css'
 
-const images = [
-    "airport",
-    "bicycle",
-    "dog-park",
-    "ferry",
-    "park",
-    "restaurant",
-    "rocket",
-    "toilets",
-    "zoo"
-]
 
 const App = () => {
     const [text, setText] = useState("")
@@ -33,13 +23,13 @@ const App = () => {
             </div>
             <ul className="glyphs-list">
 
-                {images.map((iconName, index) => {
+                {images.map((image, index) => {
                     return (
                         <li key={index}>
-                            <Icon name={iconName} />
-                            <code>Unicode - \{61 + index}</code>
-                            <span>Character - {String.fromCharCode(97 + index)}</span>
-                            <input className="icon-name" type="text" readOnly value={`svg-icon-${iconName}`} />
+                            <Icon name={image.name} />
+                            <code>Unicode - \{image.unicode}</code>
+                            <span>Character - {image.unicodeChar}</span>
+                            <input type="text" readOnly value={`icon-${image.name}`} />
                         </li>
                     )
                 })}

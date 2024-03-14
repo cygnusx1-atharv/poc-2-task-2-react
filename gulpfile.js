@@ -17,8 +17,16 @@ gulp.task('iconfont', function () {
             normalize: true,
             fontHeight: 1001
         }))
-        .on('glyphs', (glyphs, options) => {
-            // console.log(glyphs, options)
+        .on('glyphs', (glyphs) => {
+
+            // Copy the glyphs & their unicode into a file
+            gulp.src(['src/assets/templates/icon_details_js.template'])
+                .pipe(consolidate('lodash', {
+                    glyphs
+                }))
+                .pipe(rename('imagesData.js'))
+                .pipe(gulp.dest('src/data'))
+
             gulp.src(['src/assets/templates/icons_css.template'])
                 .pipe(consolidate('lodash', {
                     glyphs,

@@ -1,46 +1,66 @@
 {
-    "name": "task2-react",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "@testing-library/jest-dom": "^6.4.2",
-        "@testing-library/react": "^14.2.1",
-        "@testing-library/user-event": "^14.5.2",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-scripts": "5.0.1",
-        "web-vitals": "^2.1.4"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "iconfont": "gulp iconfont"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "devDependencies": {
-        "gulp": "^4.0.2",
-        "gulp-consolidate": "^0.2.0",
-        "gulp-iconfont": "^11.0.1",
-        "gulp-rename": "^2.0.0",
-        "gulp-svgmin": "^4.1.0"
-    }
+  "name": "task2-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "@testing-library/user-event": "^14.5.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "iconfont": "gulp iconfont",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:storybook/recommended"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.2.19",
+    "@storybook/addon-a11y": "^8.0.0",
+    "@storybook/addon-actions": "^8.0.0",
+    "@storybook/addon-essentials": "^8.0.0",
+    "@storybook/addon-interactions": "^8.0.0",
+    "@storybook/addon-links": "^8.0.0",
+    "@storybook/addon-onboarding": "^8.0.0",
+    "@storybook/blocks": "^8.0.0",
+    "@storybook/preset-create-react-app": "^8.0.0",
+    "@storybook/react": "^8.0.0",
+    "@storybook/react-webpack5": "^8.0.0",
+    "@storybook/test": "^8.0.0",
+    "autoprefixer": "^10.4.18",
+    "eslint-plugin-storybook": "^0.8.0",
+    "gulp": "^4.0.2",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-iconfont": "^11.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-svgmin": "^4.1.0",
+    "prop-types": "^15.8.1",
+    "storybook": "^8.0.0",
+    "webpack": "^5.90.3"
+  }
 }

@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '20'
 
       - name: Install dependencies
         run: npm i
@@ -33,7 +33,7 @@ jobs:
           git config --local user.email "atharvs.official@gmail.com"
           git config --local user.name "cygnusx1-atharv"
           git add .
-          git commit -m "Added new icon font in CSS"
+          git commit -m "Added new icon font in CSS & it's data in imagesData"
           git push
 
       - name: Update CSS on CDN
