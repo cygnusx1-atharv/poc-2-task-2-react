@@ -39,7 +39,7 @@ const App = () => {
                             <Icon name={iconName} />
                             <code>Unicode - \{61 + index}</code>
                             <span>Character - {String.fromCharCode(97 + index)}</span>
-                            <input type="text" readOnly value={`svg-icon-${iconName}`} />
+                            <input className="icon-name" type="text" readOnly value={`svg-icon-${iconName}`} />
                         </li>
                     )
                 })}
