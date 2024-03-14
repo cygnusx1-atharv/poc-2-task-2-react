@@ -25,33 +25,39 @@ export const images = [
     },
     
     {
-        name: 'park',
+        name: 'hoo',
         unicode: '65',
         unicodeChar: 'e'
     },
     
     {
-        name: 'restaurant',
+        name: 'park',
         unicode: '66',
         unicodeChar: 'f'
     },
     
     {
-        name: 'rocket',
+        name: 'restaurant',
         unicode: '67',
         unicodeChar: 'g'
     },
     
     {
-        name: 'toilets',
+        name: 'rocket',
         unicode: '68',
         unicodeChar: 'h'
     },
     
     {
-        name: 'zoo',
+        name: 'toilets',
         unicode: '69',
         unicodeChar: 'i'
+    },
+    
+    {
+        name: 'zoo',
+        unicode: '6a',
+        unicodeChar: 'j'
     },
     
 ]
