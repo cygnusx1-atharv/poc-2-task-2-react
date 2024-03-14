@@ -19,13 +19,13 @@ export const images = [
     },
     
     {
-        name: 'ferry',
+        name: 'doo',
         unicode: '64',
         unicodeChar: 'd'
     },
     
     {
-        name: 'foo',
+        name: 'ferry',
         unicode: '65',
         unicodeChar: 'e'
     },

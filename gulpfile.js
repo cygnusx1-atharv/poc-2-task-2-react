@@ -3,6 +3,8 @@ const iconfont = require('gulp-iconfont')
 const svgmin = require('gulp-svgmin')
 const rename = require('gulp-rename')
 const consolidate = require('gulp-consolidate')
+const chokidar = require('chokidar');
+const { spawn } = require('child_process');
 const fontName = 'atharv-font'
 
 // Task
@@ -38,6 +40,24 @@ gulp.task('iconfont', function () {
                 .pipe(gulp.dest('src/components/Icon'))
         })
         .pipe(gulp.dest('src/assets/fonts/icons'))
+})
+
+// Define a task to upload images
+gulp.task('upload-images', (done) => {
+    const uploadProcess = spawn('node', ['src/utilities/upload.js'])
+
+    uploadProcess.on('close', (code) => {
+        console.log(`Upload process exited with code ${code}`)
+        done()
+    })
+})
+
+// To watch for any changes in the images directory
+gulp.task('watch', () => {
+    chokidar.watch('src/assets/images/*').on('all', (event, path) => {
+        console.log(event, path)
+        gulp.series('iconfont', 'upload-images')()
+    })
 })
 
 gulp.task('default', gulp.series('iconfont'));
