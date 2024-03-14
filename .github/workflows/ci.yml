@@ -37,7 +37,7 @@ jobs:
           git push
 
       - name: Upload file
-        run: node upload.js
+        run: node src/utilities/upload.js
 
       # - name: Update CSS on CDN
       #   run: 'curl -X PURGE -H "Authorization: token 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" "https://purge.jsdelivr.net/gh/cygnusx1-atharv/poc-2-task-2-react@master/src/components/Icon/icon.css"'
