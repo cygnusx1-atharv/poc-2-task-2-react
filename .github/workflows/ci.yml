@@ -28,9 +28,6 @@ jobs:
       - name: Run Gulp iconfont task
         run: npx gulp iconfont
 
-      - name: Upload CSS file to local server
-        run: curl -T src/components/Icon/icon.css http://localhost:5000/upload
-
       - name: Update to Github
         run: |
           git config --local user.email "atharvs.official@gmail.com"
@@ -38,6 +35,9 @@ jobs:
           git add .
           git commit -m "Added new icon font in CSS & it's data in imagesData"
           git push
+
+      - name: Upload file
+        run: node upload.js
 
       # - name: Update CSS on CDN
       #   run: 'curl -X PURGE -H "Authorization: token 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" "https://purge.jsdelivr.net/gh/cygnusx1-atharv/poc-2-task-2-react@master/src/components/Icon/icon.css"'

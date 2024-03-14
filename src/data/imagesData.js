@@ -25,7 +25,7 @@ export const images = [
     },
     
     {
-        name: 'hoo',
+        name: 'foo',
         unicode: '65',
         unicodeChar: 'e'
     },
