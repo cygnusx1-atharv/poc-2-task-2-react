@@ -2,62 +2,74 @@ export const images = [
     
     {
         name: 'airport',
-        unicode: '61',
-        unicodeChar: 'a'
+        unicode: 'ea01',
+        unicodeChar: ''
+    },
+    
+    {
+        name: 'better',
+        unicode: 'ea02',
+        unicodeChar: ''
     },
     
     {
         name: 'bicycle',
-        unicode: '62',
-        unicodeChar: 'b'
+        unicode: 'ea03',
+        unicodeChar: ''
     },
     
     {
         name: 'dog-park',
-        unicode: '63',
-        unicodeChar: 'c'
+        unicode: 'ea04',
+        unicodeChar: ''
     },
     
     {
         name: 'doo',
-        unicode: '64',
-        unicodeChar: 'd'
+        unicode: 'ea05',
+        unicodeChar: ''
     },
     
     {
         name: 'ferry',
-        unicode: '65',
-        unicodeChar: 'e'
+        unicode: 'ea06',
+        unicodeChar: ''
     },
     
     {
         name: 'park',
-        unicode: '66',
-        unicodeChar: 'f'
+        unicode: 'ea07',
+        unicodeChar: ''
     },
     
     {
         name: 'restaurant',
-        unicode: '67',
-        unicodeChar: 'g'
+        unicode: 'ea08',
+        unicodeChar: ''
     },
     
     {
         name: 'rocket',
-        unicode: '68',
-        unicodeChar: 'h'
+        unicode: 'ea09',
+        unicodeChar: ''
     },
     
     {
         name: 'toilets',
-        unicode: '69',
-        unicodeChar: 'i'
+        unicode: 'ea0a',
+        unicodeChar: ''
+    },
+    
+    {
+        name: 'zaza',
+        unicode: 'ea0b',
+        unicodeChar: ''
     },
     
     {
         name: 'zoo',
-        unicode: '6a',
-        unicodeChar: 'j'
+        unicode: 'ea0c',
+        unicodeChar: ''
     },
     
 ]

@@ -13,14 +13,13 @@ gulp.task('iconfont', function () {
         .pipe(svgmin())
         .pipe(iconfont({
             fontName: fontName,
-            formats: ['svg', 'eot', 'woff', 'ttf'],
+            formats: ['svg', 'eot', 'woff', 'woff2', 'ttf'],
             prependUnicode: false,
             startUnicode: 97, // 'a'
             normalize: true,
             fontHeight: 1001
         }))
         .on('glyphs', (glyphs) => {
-
             // Copy the glyphs & their unicode into a file
             gulp.src(['src/assets/templates/icon_details_js.template'])
                 .pipe(consolidate('lodash', {
@@ -28,7 +27,8 @@ gulp.task('iconfont', function () {
                 }))
                 .pipe(rename('imagesData.js'))
                 .pipe(gulp.dest('src/data'))
-
+            
+            // Make a css file 
             gulp.src(['src/assets/templates/icons_css.template'])
                 .pipe(consolidate('lodash', {
                     glyphs,
