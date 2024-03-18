@@ -2,74 +2,68 @@ export const images = [
     
     {
         name: 'airport',
-        unicode: 'ea01',
-        unicodeChar: ''
-    },
-    
-    {
-        name: 'better',
-        unicode: 'ea02',
-        unicodeChar: ''
+        unicode: '61',
+        unicodeChar: 'a'
     },
     
     {
         name: 'bicycle',
-        unicode: 'ea03',
-        unicodeChar: ''
+        unicode: '62',
+        unicodeChar: 'b'
     },
     
     {
         name: 'dog-park',
-        unicode: 'ea04',
-        unicodeChar: ''
+        unicode: '63',
+        unicodeChar: 'c'
     },
     
     {
         name: 'doo',
-        unicode: 'ea05',
-        unicodeChar: ''
+        unicode: '64',
+        unicodeChar: 'd'
     },
     
     {
         name: 'ferry',
-        unicode: 'ea06',
-        unicodeChar: ''
+        unicode: '65',
+        unicodeChar: 'e'
     },
     
     {
         name: 'park',
-        unicode: 'ea07',
-        unicodeChar: ''
+        unicode: '66',
+        unicodeChar: 'f'
     },
     
     {
         name: 'restaurant',
-        unicode: 'ea08',
-        unicodeChar: ''
+        unicode: '67',
+        unicodeChar: 'g'
     },
     
     {
         name: 'rocket',
-        unicode: 'ea09',
-        unicodeChar: ''
+        unicode: '68',
+        unicodeChar: 'h'
     },
     
     {
         name: 'toilets',
-        unicode: 'ea0a',
-        unicodeChar: ''
+        unicode: '69',
+        unicodeChar: 'i'
     },
     
     {
         name: 'zaza',
-        unicode: 'ea0b',
-        unicodeChar: ''
+        unicode: '6a',
+        unicodeChar: 'j'
     },
     
     {
         name: 'zoo',
-        unicode: 'ea0c',
-        unicodeChar: ''
+        unicode: '6b',
+        unicodeChar: 'k'
     },
     
 ]
